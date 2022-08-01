@@ -23,3 +23,12 @@
 {
     display: flex;
 }
+.maincontainer
+{
+        display: flex;
+       flex-wrap: wrap;
+       width: 865px;
+       gap: 30px;
+        justify-content: center;
+     }
+
