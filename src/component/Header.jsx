@@ -7,6 +7,8 @@ let Header = function () {
     
     const [name, setname] = useState("")
     localStorage.setItem('name', JSON.stringify(name));
+   let userdata= JSON.parse(localStorage.getItem('data'));
+       console.log(userdata);
 
 
 
@@ -18,13 +20,24 @@ let Header = function () {
             gotdata.results.forEach(element => {
                 element.expenses = {'amount':"₹10000"}
             });
-            localStorage.setItem('data', JSON.stringify(gotdata.results));
-            setdata(gotdata.results);
-            console.log(data);
+           
+            if(userdata === null) {
+                localStorage.setItem('data', JSON.stringify(gotdata.results));
+                setdata(gotdata.results);
+                
+            } else {
+                setdata(userdata)
+            }
+           
+            
+          
+            
         }
         fetchData();
-        return () => { };
+        
+        return () => {};
     }, [])
+    
 
     ////////////////////////////////////////
 
@@ -55,7 +68,7 @@ let Header = function () {
                 <input className="charactername" value={name} onChange={(e) => setname(e.target.value)}></input>
                 <button onClick={()=>getDetails()}>submit</button>
             </div>
-            <div className="maincontainer" style={{ display: 'flex', flexWrap: 'wrap', width: '865px', gap: '30px', justifyContent: 'center', }}>
+            <div className="maincontainer">
                 {
 
                     data.length > 0 && data.map((obj, index) => (
