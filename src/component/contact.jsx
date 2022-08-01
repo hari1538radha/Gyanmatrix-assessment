@@ -7,12 +7,15 @@ let Contact =function Contact()
    const a = JSON.parse(localStorage.getItem('single')) || [];
 //console.log(userdata);
     const [uname, setname] = useState("");
+    const [expenses, setexp] = useState("");
+    const [amount, setamt] = useState("");
     const [data, setdata] = useState('');
     const [dataset,setdataset] = useState(JSON.parse(localStorage.getItem('single')) || []);
    console.log(dataset)
      useEffect(() =>
     { 
          localStorage.setItem('name', JSON.stringify(uname))
+         
 
      },[])
     
@@ -22,7 +25,16 @@ let Contact =function Contact()
             same.name.first === uname)
         localStorage.setItem("single",JSON.stringify(showdata));
         setdataset(showdata);
+
+        localStorage.setItem('exp', JSON.stringify(expenses))
+        localStorage.setItem('amount', JSON.stringify(amount))
+  
     }
+    let amountfinall =10000-amount
+    
+console.log(expenses)
+console.log(amount)
+
 
  return (
 
@@ -30,6 +42,11 @@ let Contact =function Contact()
     <input className="charactername" value={uname} onChange={(e) => setname(e.target.value)}></input>
     <br>
     </br>
+    <input className="charactername" value={expenses} onChange={(e) => setexp(e.target.value)}></input>
+    <br>
+    </br>
+    <input className="charactername" value={amount} onChange={(e) => setamt(e.target.value)}></input>
+    
     <button onClick={()=> getDetail()}>submit</button>
    
     <div className="maincontainer">
@@ -60,6 +77,10 @@ let Contact =function Contact()
                     )
 
                 }
+                
+                <div>expenses:{expenses}</div>
+                <div>
+                    FinallAmount:{amountfinall}</div>
                 </div>
                 </div>
  )
