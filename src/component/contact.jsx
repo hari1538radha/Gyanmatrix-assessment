@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-
+import styles from '../css/contact.css'
 let Contact =function Contact()
 {   
     const userdata= JSON.parse(localStorage.getItem('data')) || [];
@@ -38,16 +38,21 @@ console.log(amount)
 
  return (
 
-    <div><label>Enter the name :</label>
-    <input className="charactername" value={uname} onChange={(e) => setname(e.target.value)}></input>
+    <div className="totalcontainer">
+        <div className="namedata"><label>Enter the name :</label>
+    <input placeholder="ENTER NAME" className="charactername" value={uname} onChange={(e) => setname(e.target.value)}></input>
     <br>
-    </br>
-    <input className="charactername" value={expenses} onChange={(e) => setexp(e.target.value)}></input>
+    </br></div>
+    <div className="expenses"> <label>Enter expenses detail :</label>
+    <input placeholder="ENTER EXP NAME"  className="charactername" value={expenses} onChange={(e) => setexp(e.target.value)}></input>
     <br>
-    </br>
-    <input className="charactername" value={amount} onChange={(e) => setamt(e.target.value)}></input>
-    
-    <button onClick={()=> getDetail()}>submit</button>
+    </br></div>
+    <div className="amount"> <label>Enter the amount :   </label>
+    <input placeholder="ENTER AMOUNT" className="charactername" value={amount} onChange={(e) => setamt(e.target.value)}></input>
+    </div>
+   
+   <div className="button"> <button  className="txtbtn"onClick={()=> getDetail()}>submit</button></div>
+   
    
     <div className="maincontainer">
                 {
@@ -59,14 +64,15 @@ console.log(amount)
                                 <div className="contentcontainer" >
                                     <img className="image" src={obj.picture.large}></img>
                                     <br></br>
-                                    <span className="name">{obj.name.title} {obj.name.first}</span>
+                                    <div className="datacont"><span className="name">Name: {obj.name.title} {obj.name.first}</span>
                                     <br></br>
-                                    <span className="name">{obj.location.state}</span>
+                                    <span className="name">State: {obj.location.state}</span>
                                     <br></br>
-                                    <span className="name">{obj.email}</span>
+                                    <span className="name">Email: {obj.email}</span>
                                     <br></br>
-                                    <span className="name">{obj.expenses.amount}</span>
-                                    <br></br>
+                                    <span className="name">Salary: {obj.expenses.amount}</span>
+                                    <br></br></div>
+                                    
 
 
                                 </div>
@@ -78,9 +84,9 @@ console.log(amount)
 
                 }
                 
-                <div>expenses:{expenses}</div>
+                <div>Expenses:{expenses}</div>
                 <div>
-                    FinallAmount:{amountfinall}</div>
+                    Final Amount:{amountfinall}</div>
                 </div>
                 </div>
  )

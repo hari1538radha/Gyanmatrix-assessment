@@ -2,7 +2,7 @@ import React from "react";
 
 import  ReactDOM  from "react-dom/client";
 
-import Header from "./component/Header"
+import Header from "./component/contact";
 
 let data =document.getElementById("main");
 
