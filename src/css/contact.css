@@ -1,0 +1,147 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+.namedata 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-top: 50px;
+   text-transform:uppercase;
+   
+   
+
+}
+.namedata  label{
+    margin-right: 59px;
+}
+.namedata:hover
+{
+    color: white;
+}
+.expenses
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    text-transform:uppercase;
+}
+
+.charactername
+{
+    border: transparent;
+    background: rgba(19, 16, 16, 0.238);
+    text-align: center;
+    color: rgb(16, 15, 13);
+}
+.expenses:hover
+{
+    color: white;
+}
+.amount
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    text-transform:uppercase;
+  
+}
+.amount label
+{
+    margin-right: 34px;
+}
+.amount:hover
+{
+    color: white;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  
+
+}
+.txtbtn
+{
+    padding-left : 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    background:transparent;
+    border: transparent;
+}
+.txtbtn:hover
+{
+    transition: .5s;
+ transform: scale(1.2,1.2);
+ border: transparent;
+ box-shadow: 2px 2px 3px black;
+}
+.contentcontainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    width:fit-content;
+    background:rgba(128, 128, 128, 0.479)
+}
+
+.maincontainer
+{
+   
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+
+    
+}
+.maincontainer img:hover{
+    transition: .5s;
+    transform: scale(1.1,1.1);
+    box-shadow: 2px 3px 5px black ;
+}
+.contentcontainer:hover{
+    box-shadow: -6px -7px 10px rgb(26, 20, 20);
+    transition: 0.8s;
+   
+    transform:scale(0.9,0.9);
+    border: transparent;
+    
+}
+.maincontainer img{
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.datacont
+{
+    
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.datacont:hover{
+    text-shadow: 1px 2px 2px rgb(251, 249, 249);
+    
+}
+.totalcontainer
+{
+background: url(../images/background.png);
+background-size: cover;
+
+
+}
