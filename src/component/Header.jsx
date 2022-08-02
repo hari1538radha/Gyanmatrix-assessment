@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import group from "../images/group.png"
+import group from "../images/logo.png"
 import "../css/Header.css"
 let Header = function () {
     const url = "https://randomuser.me/api/?results=10"
@@ -58,17 +58,13 @@ let Header = function () {
 
                     <img className="imagelogo" src={group} alt="no image"></img>
                 </div>
-                <div>
-                    <span>Home</span>
-                    <span>Contact</span>
+                <div className="list">
+                    <span className="home">Home</span>
+                    <span className="contact">Contact</span>
                 </div>
 
             </nav>
-            <div>
-                <label>Enter the name</label>
-                <input className="charactername" value={name} onChange={(e) => setname(e.target.value)}></input>
-                <button onClick={()=>getDetails()}>submit</button>
-            </div>
+           
             <div className="maincontainer">
                 {
 
@@ -79,13 +75,13 @@ let Header = function () {
                                 <div className="contentcontainer" >
                                     <img className="image" src={obj.picture.large}></img>
                                     <br></br>
-                                    <span className="name">{obj.name.title} {obj.name.first}</span>
+                                    <span className="name">Name: {obj.name.title} {obj.name.first}</span>
                                     <br></br>
-                                    <span className="name">{obj.location.state}</span>
+                                    <span className="name">State: {obj.location.state}</span>
                                     <br></br>
-                                    <span className="name">{obj.email}</span>
+                                    <span className="name">Email: {obj.email}</span>
                                     <br></br>
-                                    <span className="name">{obj.expenses.amount}</span>
+                                    <span className="name">Salary:{obj.expenses.amount}</span>
                                     <br></br>
 
 
@@ -99,6 +95,14 @@ let Header = function () {
                 }
 
 
+            </div>
+            <div className="character">
+                <div> <label className="label">Enter the name:</label>
+                
+                <input className="charactername" value={name} onChange={(e) => setname(e.target.value)}></input>
+                <br></br></div>
+               
+                <button className="submit" onClick={()=>getDetails()}>submit</button>
             </div>
         </div>
 
