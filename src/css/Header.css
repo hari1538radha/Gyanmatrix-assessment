@@ -108,11 +108,15 @@ transform: scale(1.1,1.1);
        gap: 50px;
        align-items: center;
         justify-content: center;
-        background-image: url(../images/back2.png);
-        background-position: center; /* Center the image */
-        background-repeat:repeat; /* Do not repeat the image */
+  
        
      }
+.background
+{
+          background-image: url(../images/back2.png);
+        background-position: center; /* Center the image */
+        background-repeat:repeat; /* Do not repeat the image */
+}
 .contentcontainer
 {
     border: 1px black solid;
