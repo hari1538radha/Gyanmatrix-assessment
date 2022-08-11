@@ -64,11 +64,11 @@ let Header = function () {
 
             </nav>
            
-<div className="background"></div>
+
             <div className="maincontainer">
                 {
-
-                    data.length > 0 && data.map((obj, index) => (
+<div className="background">
+                data.length > 0 && data.map((obj, index) => (
 
                         <div className="subconatiner" key={index}>
                             <div className="content" >
@@ -91,6 +91,8 @@ let Header = function () {
 
                     )
                     )
+                </div>
+                    
 
                 }
 
