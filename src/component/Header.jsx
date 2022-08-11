@@ -64,11 +64,11 @@ let Header = function () {
 
             </nav>
            
-
-            <div className="maincontainer">
-                {
 <div className="background">
-                data.length > 0 && data.map((obj, index) => (
+               <div className="maincontainer">
+                {
+
+                 data.length > 0 && data.map((obj, index) => (
 
                         <div className="subconatiner" key={index}>
                             <div className="content" >
@@ -91,13 +91,14 @@ let Header = function () {
 
                     )
                     )
-                </div>
                     
 
                 }
 
 
             </div>
+                </div>
+            
             <div className="character">
                 <div> <label className="label">Enter the name:</label>
                 
