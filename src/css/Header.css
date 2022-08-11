@@ -114,9 +114,12 @@ transform: scale(1.1,1.1);
 .background
 {
           background-image: url(../images/back2.png);
+     
         background-position: center; /* Center the image */
         background-repeat:repeat; /* Do not repeat the image */
-    opacity:0.5;
+        background: #221f1f73;
+        opacity: 0.7;
+  
 }
 .contentcontainer
 {
