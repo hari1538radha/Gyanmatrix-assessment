@@ -45,7 +45,6 @@ let Header = function () {
         let showdata = data.filter((same) =>
             same.name.first === name)
         setdata(showdata);
-        localStorage.setItem('data', JSON.stringify(showdata));
 
     }
     
